@@ -6,7 +6,7 @@ public class TransactionControls {
   private boolean panValid;
   private boolean transactionOn;
 
-  public TransactionControls(String mtiPresent, String panValid, String transactionOn) {
+  public TransactionControls(boolean mtiPresent, boolean panValid, boolean transactionOn) {
 
     this.mtiPresent = mtiPresent;
     this.panValid = panValid;
