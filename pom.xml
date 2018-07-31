@@ -7,6 +7,13 @@
     <groupId>com.inss.atmn</groupId>
     <artifactId>pos-domain</artifactId>
     <version>1.0.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.11.0</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

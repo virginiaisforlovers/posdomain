@@ -1,6 +1,6 @@
-package com.inss.atmn;
+package com.inss.atmn.POJOs;
 
-public class OfficeList {
+public class OfficeListPOJO {
 
   private String state;
   private int district;
