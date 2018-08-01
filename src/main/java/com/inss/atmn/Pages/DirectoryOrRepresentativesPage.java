@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+//https://www.house.gov/representatives
 public class DirectoryOrRepresentativesPage extends BasePage {
 
   @FindBy(xpath = "//a[contains(@href,'state')]")
@@ -15,22 +17,18 @@ public class DirectoryOrRepresentativesPage extends BasePage {
     super(driver);
   }
 
-  public WebElement gotoState(String stateName) {
 
-    String stateTableXpath = String
-        .format("//caption[contains(@id, 'state')] and contains(text(), '%s')", stateName);
-    return driver.findElement(By.xpath(stateTableXpath));
+  private List<WebElement> getDistrictWebElementsByState(String state) {
+    String districtXpath = String.format(
+        "//table[@class='table' and caption[contains(@id, 'state') and contains(text(), '%s')]]//tbody//tr//td[1]", state);
+    return driver.findElement(By.xpath(districtXpath));
   }
 
-  private List<WebElement> getDistrictWebElementsByState() {
-    String districtTableNameXpath = "//tbody//tr//td[1]";
-    return driver.findElements(By.xpath(districtTableNameXpath));
-  }
+
 
   public String getDistrictTexts(String stateName) {
-    gotoState(stateName)
+    for
   }
-
 
   String representativeNameTableXpath = "//tbody//tr//td[2]";
   String partyTableXpath = "//tbody//tr//td[3]";
