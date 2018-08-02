@@ -1,5 +1,6 @@
 package com.inss.atmn.Pages;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,14 +22,16 @@ public class DirectoryOrRepresentativesPage extends BasePage {
   private List<WebElement> getDistrictWebElementsByState(String state) {
     String districtXpath = String.format(
         "//table[@class='table' and caption[contains(@id, 'state') and contains(text(), '%s')]]//tbody//tr//td[1]", state);
-    return driver.findElement(By.xpath(districtXpath));
+    return driver.findElements(By.xpath(districtXpath));
   }
 
-
-
-  public String getDistrictTexts(String stateName) {
-    for
+  public void getDistrictsByState(String state) {
+    List<WebElement> listDistrict = new ArrayList<WebElement>();
+    for (int i=0; i<listDistrict.size(); i++){
+      System.out.println(listDistrict.get(i).getText());
+    }
   }
+
 
   String representativeNameTableXpath = "//tbody//tr//td[2]";
   String partyTableXpath = "//tbody//tr//td[3]";
