@@ -26,11 +26,13 @@ public class RepresentativesPage extends BasePage {
     return driver.findElements(By.xpath(districtXpath));
   }
 
-  public void getDistrictsByState(String state) {
+  public List<String> getDistrictsByState(String state) {
     List<WebElement> listDistrict = getDistrictWebElementsByState(state, 1);
-    for (int i = 0; i < listDistrict.size(); i++) {
-      System.out.println(listDistrict.get(i).getText());
+    List<String> stringList = new ArrayList<String>();
+    for (int i=0; i<listDistrict.size(); i++) {
+      stringList.add(listDistrict.get(i).getText())
     }
+    return stringList;
   }
 
   public void getRepresentativeNameByState(String state) {
@@ -67,5 +69,5 @@ public class RepresentativesPage extends BasePage {
       System.out.println(listDistrict.get(i).getText());
     }
   }
-  
+
 }
