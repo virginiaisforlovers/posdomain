@@ -2,6 +2,9 @@ package com.inss.atmn.POJOs;
 
 public class OfficeListPOJO {
 
+
+
+  private int repId;
   private String state;
   private int district;
   private String firstName;
@@ -12,20 +15,28 @@ public class OfficeListPOJO {
   private String email;
   private String committeeAssignment;
 
-  public String getState() {
-    return state;
-  }
-
-  public void setState(String state) {
-    this.state = state;
-  }
-
   public int getDistrict() {
     return district;
   }
 
   public void setDistrict(int district) {
     this.district = district;
+  }
+
+  public int getRepId() {
+    return repId;
+  }
+  
+  public void setRepId(int repId) {
+    this.repId = repId;
+  }
+
+  public String getState() {
+    return state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
   }
 
   public String getFirstName() {

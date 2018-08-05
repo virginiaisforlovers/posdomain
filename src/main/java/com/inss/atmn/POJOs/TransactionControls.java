@@ -1,4 +1,4 @@
-package com.inss.atmn;
+package com.inss.atmn.POJOs;
 
 public class TransactionControls {
 

@@ -30,7 +30,7 @@ public class RepresentativesPage extends BasePage {
     List<WebElement> listDistrict = getDistrictWebElementsByState(state, 1);
     List<String> stringList = new ArrayList<String>();
     for (int i=0; i<listDistrict.size(); i++) {
-      stringList.add(listDistrict.get(i).getText())
+      stringList.add(listDistrict.get(i).getText());
     }
     return stringList;
   }
