@@ -6,7 +6,11 @@ public class TransactionControls {
   private boolean panValid;
   private boolean transactionOn;
 
+<<<<<<< Updated upstream
   public TransactionControls(boolean mtiPresent, boolean panValid, boolean transactionOn) {
+=======
+  public TransactionControls(String mtiPresent, String panValid, String transactionOn) {
+>>>>>>> Stashed changes
 
     this.mtiPresent = mtiPresent;
     this.panValid = panValid;
