@@ -1,12 +1,12 @@
 package com.inss.atmn.POJOs;
 
+import java.util.List;
+
 public class OfficeListPOJO {
 
-
-
-  private int repId;
-  private String state;
-  private int district;
+  private List<Integer> repId;
+  private List<String> state;
+  private List<String> district;
   private String firstName;
   private String lastName;
   private String party;
@@ -15,27 +15,27 @@ public class OfficeListPOJO {
   private String email;
   private String committeeAssignment;
 
-  public int getDistrict() {
-    return district;
-  }
-
-  public void setDistrict(int district) {
-    this.district = district;
-  }
-
-  public int getRepId() {
+  public List<Integer> getRepId() {
     return repId;
   }
-  
-  public void setRepId(int repId) {
+
+  public void setRepId(List<Integer> repId) {
     this.repId = repId;
   }
 
-  public String getState() {
+  public List<String> getDistrict() {
+    return district;
+  }
+
+  public void setDistrict(List<String> district) {
+    this.district = district;
+  }
+
+  public List<String> getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(List<String> state) {
     this.state = state;
   }
 
